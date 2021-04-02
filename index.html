@@ -16,7 +16,7 @@ if (!empty($_FILES['attachment'])) {
     } elseif (!move_uploaded_file($file['tmp_name'], $newFilePath)) {
         $error = 'Ошибка при загрузке файла';
     } else {
-        $result = 'http://myproject.loc/uploads/' . $srcFileName;
+        $result = 'https://balbashev.github.io/web/uploads/' . $srcFileName;
     }
 }
 ?>
@@ -31,7 +31,7 @@ if (!empty($_FILES['attachment'])) {
     <?= $result ?>
 <?php endif; ?>
 <br>
-<form action="/upload.php" method="post" enctype="multipart/form-data">
+<form action="/index.html" method="post" enctype="multipart/form-data">
     <input type="file" name="attachment">
     <input type="submit">
 </form>
